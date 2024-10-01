@@ -10,11 +10,9 @@ public class Counting
         Scanner scanner = new Scanner(System.in); 
 
         int cycles = Integer.valueOf(scanner.nextLine());
-        int start = 0;
 
-        while (start <= cycles) {
+        for (int start = 0; start <= cycles; start = start + 1) {
             System.out.println(start);
-            start = start + 1;
         }
 
     }
