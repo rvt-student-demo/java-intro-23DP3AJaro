@@ -27,8 +27,10 @@ public class RepeatingBreakingAndRemembering
 
 
         }
+        double average = sum / count;
         System.out.println("Sum: " + sum);
         System.out.println("Numbers: " + count);
+        System.out.println("Average: " + average);
     }
 
 }
