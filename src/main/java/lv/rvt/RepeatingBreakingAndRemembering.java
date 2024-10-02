@@ -10,6 +10,7 @@ public class RepeatingBreakingAndRemembering
         Scanner scanner = new Scanner(System.in); 
         System.out.println("Give numbers:");
         int sum = 0;
+        int count = 0;
 
 
         while (true) { 
@@ -19,6 +20,7 @@ public class RepeatingBreakingAndRemembering
                 break;
             } else {
                 sum = sum + UserInput;
+                count = count + 1;
                 continue;
             }
                 
@@ -26,6 +28,7 @@ public class RepeatingBreakingAndRemembering
 
         }
         System.out.println("Sum: " + sum);
+        System.out.println("Numbers: " + count);
     }
 
 }
