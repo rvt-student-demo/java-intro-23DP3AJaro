@@ -19,7 +19,7 @@ public class Reprint
     }
     
     public static void printText() {
-        System.out.println("Hello world!");// write some code in here
+        System.out.println("In a hole in the ground there lived a method");// write some code in here
     }
 
 }
