@@ -6,7 +6,10 @@ public class DivisiblebyThree
 {
     public static void main( String[] args )
     {
-        divisibleByThreeInRange(2, 10);
+        Scanner scanner = new Scanner(System.in);
+        int a = Integer.valueOf(scanner.nextLine());
+        int b = Integer.valueOf(scanner.nextLine());
+        divisibleByThreeInRange(a, b);
         
 
     }
