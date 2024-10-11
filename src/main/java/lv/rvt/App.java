@@ -7,19 +7,21 @@ public class App
     public static void main( String[] args )
     {
         
-        Scanner scanner = new Scanner(System.in); 
+        Stars.printStars(5);
+        Stars.printStars(3);
+        Stars.printStars(9);
 
-        System.out.println("Ievadit vardu: ");
-        String name = scanner.nextLine();
+        System.out.println();
 
-        System.out.println("Ievadiet uzvardu: ");
-        String surname = scanner.nextLine();
+        Stars.printSquare(4);
 
-        System.out.println("Ievadiet grupu: ");
-        String group = scanner.nextLine();
+        System.out.println();
 
+        Stars.printRectangle(17, 3);
 
-        System.out.println("Students: " + " " + name  + " " +  surname  + " " +  group);
+        System.out.println();
+
+        Stars.printTriangle(4);
 
     }
 
