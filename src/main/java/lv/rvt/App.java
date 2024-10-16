@@ -1,6 +1,6 @@
 package lv.rvt;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class App 
 {
@@ -23,9 +23,10 @@ public class App
 //
         //Stars.printTriangle(4);
 
-        Stars.printTriangle(4);
+//      Stars.printTriangle(4);
 
         Stars.christmasTree(4);
+        Stars.christmasTree(17);
 
     }
 
