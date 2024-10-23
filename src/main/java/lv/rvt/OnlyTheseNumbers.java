@@ -25,7 +25,7 @@ public class OnlyTheseNumbers
         }
         System.out.print("From where? ");
         Integer b = Integer.valueOf(scanner.nextLine());
-        System.out.print("To where?");
+        System.out.print("To where? ");
         Integer c = Integer.valueOf(scanner.nextLine());
 
         for (int i = b; i <= c; i = i+1) {
