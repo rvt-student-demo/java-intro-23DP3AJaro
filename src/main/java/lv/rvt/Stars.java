@@ -46,7 +46,7 @@ public class Stars
             number = number + 2;
         }
         for (int i = 0; i < 2; i = i + 1) {
-            printSpaces(number-(height+2));
+            printSpaces(height-1);
             printStars(3);
         }
 
