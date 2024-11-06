@@ -7,26 +7,21 @@ public class App
     public static void main( String[] args )
     {
         
-        //Stars.printStars(5);
-        //Stars.printStars(3);
-        //Stars.printStars(9);
-//
-        //System.out.println();
-//
-        //Stars.printSquare(4);
-//
-        //System.out.println();
-//
-        //Stars.printRectangle(17, 3);
-//
-        //System.out.println();
-//
-        //Stars.printTriangle(4);
+        Account artosAccount = new Account("Arto's account", 100.00);
+        Account artosSwissAccount = new Account("Arto's account in Switzerland", 1000000.00);
 
-//      Stars.printTriangle(4);
+        System.out.println("Initial state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
 
-        Stars.christmasTree(4);
-        Stars.christmasTree(17);
+        artosAccount.withdraw(20);
+        System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
+        artosSwissAccount.deposit(200);
+        System.out.println("The balance of Arto's other account is now: " + artosSwissAccount.balance());
+
+        System.out.println("End state");
+        System.out.println(artosAccount);
+        System.out.println(artosSwissAccount);
 
     }
 
