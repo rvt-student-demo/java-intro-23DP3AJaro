@@ -5,26 +5,28 @@ import java.util.*;
 public class App 
 {
     public static void main(String[] args) {
-        Statistics statistics = new Statistics();
-        Scanner scanner = new Scanner(System.in);
-        int even = 0;
-        int odd = 0;
-        System.out.println("Enter numbers: ");
-        while (true) {
-            int UserInput = scanner.nextInt();
-            if (UserInput == -1) {
-                break;
-            } else if (UserInput % 2 == 0) {
-                even = even + UserInput;
-                statistics.addNumber(UserInput);
-            } else if (UserInput % 2 != 0) {
-                odd = odd + UserInput;
-                statistics.addNumber(UserInput);
-            }
-        }
-        System.out.println("Sum: " + statistics.sum());
-        System.out.println("Sum of even numbers: "+even);
-        System.out.println("Sum of odd numbers: "+odd);
+        PaymentCard paulsCard = new PaymentCard(20);
+        PaymentCard mattsCard = new PaymentCard(30);
+
+        paulsCard.eatHeartily();
+        mattsCard.eatAffordably();
+
+        System.out.println("Paul: The card has a balance of "+paulsCard+" euros");
+        System.out.println("Matt: The card has a balance of "+mattsCard+" euros");
+
+        paulsCard.addMoney(20);
+        mattsCard.eatHeartily();
+
+        System.out.println("Paul: The card has a balance of "+paulsCard+" euros");
+        System.out.println("Matt: The card has a balance of "+mattsCard+" euros");
+
+        paulsCard.eatAffordably();
+        paulsCard.eatAffordably();
+
+        mattsCard.addMoney(50);
+
+        System.out.println("Paul: The card has a balance of "+paulsCard+" euros");
+        System.out.println("Matt: The card has a balance of "+mattsCard+" euros");
     }
 
 }
