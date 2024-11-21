@@ -5,28 +5,46 @@ import java.util.*;
 public class App 
 {
     public static void main(String[] args) {
-        PaymentCard paulsCard = new PaymentCard(20);
-        PaymentCard mattsCard = new PaymentCard(30);
+        Scanner scanner = new Scanner(System.in);
 
-        paulsCard.eatHeartily();
-        mattsCard.eatAffordably();
+        ArrayList<String> Names = new ArrayList<>();
+        ArrayList<Integer> PagesList = new ArrayList<>();
+        ArrayList<Integer> Years = new ArrayList<>();
 
-        System.out.println("Paul: The card has a balance of "+paulsCard+" euros");
-        System.out.println("Matt: The card has a balance of "+mattsCard+" euros");
+        while (true) {
+            System.out.print("Title: ");
+            String title = scanner.nextLine();
+            if (title.isEmpty()) {
+                break;
+            } else {
+                Names.add(title);
 
-        paulsCard.addMoney(20);
-        mattsCard.eatHeartily();
+                System.out.print("Pages: ");
+                int Pages = scanner.nextInt();
+                PagesList.add(Pages);
+                scanner.nextLine();
 
-        System.out.println("Paul: The card has a balance of "+paulsCard+" euros");
-        System.out.println("Matt: The card has a balance of "+mattsCard+" euros");
+                System.out.print("Publication year: ");
+                int Year = scanner.nextInt();
+                Years.add(Year);
+                scanner.nextLine();
+            }
+        }
 
-        paulsCard.eatAffordably();
-        paulsCard.eatAffordably();
+        System.out.println();
 
-        mattsCard.addMoney(50);
+        System.out.print("What information will be printed? ");
+        String choice = scanner.nextLine();
+        if (choice.equals("everything")) {
+            for (int i = 0; i < Names.size(); i = i + 1) {
+                System.out.println(Names.get(i) + ", " + PagesList.get(i) + "pages, " + Years.get(i));
+            }
+        } else if (choice.equals("name")) {
+            for (int i = 0; i < Names.size(); i = i + 1) {
+                System.out.println(Names.get(i));
+            }
+        }
 
-        System.out.println("Paul: The card has a balance of "+paulsCard+" euros");
-        System.out.println("Matt: The card has a balance of "+mattsCard+" euros");
     }
 
 }
