@@ -35,7 +35,7 @@ public class PaymentTerminal {
 
     public boolean eatAffordably(PaymentCard card) {
         boolean success = false;
-        if (card.getBalance() >= 2.50) {
+        if (card.balance() >= 2.50) {
             card.Payment(2.50);
             success = true;
             affordableMeals = affordableMeals + 1;
@@ -49,7 +49,7 @@ public class PaymentTerminal {
 
     public boolean eatHeartily(PaymentCard card) {
         boolean success = false;
-        if (card.getBalance() >= 4.30) {
+        if (card.balance() >= 4.30) {
             card.Payment(4.30);
             success = true;
             heartyMeals = heartyMeals + 1;
@@ -59,6 +59,10 @@ public class PaymentTerminal {
         // a hearty meal costs 4.30 euros
         // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
         // otherwise false is returned
+    }
+
+    public void addMoneyToCard(PaymentCard card, double sum) {
+        card.addMoney(sum);
     }
 
     public String toString() {
