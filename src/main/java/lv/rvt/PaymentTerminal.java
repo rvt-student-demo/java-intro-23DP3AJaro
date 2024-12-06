@@ -33,6 +33,34 @@ public class PaymentTerminal {
         // if the payment parameter is not large enough, no meal is sold and the method should return the whole payment
     }
 
+    public boolean eatAffordably(PaymentCard card) {
+        boolean success = false;
+        if (card.getBalance() >= 2.50) {
+            card.Payment(2.50);
+            success = true;
+            affordableMeals = affordableMeals + 1;
+            return success;
+        }
+        return success;
+        // an affordable meal costs 2.50 euros
+        // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+        // otherwise false is returned
+    }
+
+    public boolean eatHeartily(PaymentCard card) {
+        boolean success = false;
+        if (card.getBalance() >= 4.30) {
+            card.Payment(4.30);
+            success = true;
+            heartyMeals = heartyMeals + 1;
+            return success;
+        }
+        return success;
+        // a hearty meal costs 4.30 euros
+        // if the payment card has enough money, the balance of the card is decreased by the price, and the method returns true
+        // otherwise false is returned
+    }
+
     public String toString() {
         return "money: " + money + ", number of sold afforable meals: " + affordableMeals + ", number of sold hearty meals: " + heartyMeals;
     }
