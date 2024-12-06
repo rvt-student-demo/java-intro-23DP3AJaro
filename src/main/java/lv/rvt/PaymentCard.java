@@ -7,12 +7,16 @@ public class PaymentCard {
         this.balance = balance;
     }
 
-    public double balance() {
-        return this.balance;
+    public double getBalance() {
+        return balance;
     }
 
     public void addMoney(double increase) {
         this.balance = this.balance + increase;
+    }
+
+    public void Payment(double amount){
+        balance = balance - amount;
     }
 
     public boolean takeMoney(double amount) {
