@@ -7,7 +7,7 @@ public class PaymentCard {
         this.balance = balance;
     }
 
-    public double getBalance() {
+    public double balance() {
         return balance;
     }
 
