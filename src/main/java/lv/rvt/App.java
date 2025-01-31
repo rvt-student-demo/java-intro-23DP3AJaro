@@ -4,24 +4,18 @@ import java.util.*;
 
 public class App 
 {
+
+    public static void printPersons(ArrayList<Person> persons) {
+           for (int i = 0; i < persons.size(); i = i + 1) {
+                System.out.println(persons.get(i));
+           }
+    }
     public static void main(String[] args) {
-        PaymentTerminal unicafeExactum = new PaymentTerminal();
-        System.out.println(unicafeExactum);
+        ArrayList<Person> persons = new ArrayList<Person>();
 
-        PaymentCard annesCard = new PaymentCard(2);
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
 
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        boolean wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        unicafeExactum.addMoneyToCard(annesCard, 100);
-
-        wasSuccessful = unicafeExactum.eatHeartily(annesCard);
-        System.out.println("there was enough money: " + wasSuccessful);
-
-        System.out.println("amount of money on the card is " + annesCard.balance() + " euros");
-
-        System.out.println(unicafeExactum);
+        printPersons(persons);
     }
 }
