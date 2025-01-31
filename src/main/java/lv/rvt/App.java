@@ -5,17 +5,13 @@ import java.util.*;
 public class App 
 {
 
-    public static void printPersons(ArrayList<Person> persons) {
-           for (int i = 0; i < persons.size(); i = i + 1) {
-                System.out.println(persons.get(i));
-           }
-    }
+    
     public static void main(String[] args) {
-        ArrayList<Person> persons = new ArrayList<Person>();
+        ProductWarehouseWithHistory juice = new ProductWarehouseWithHistory("Juice", 1000.0, 1000.0);
+juice.takeFromWarehouse(11.3);
+juice.addToWarehouse(1.0);
+//System.out.println(juice.history()); // [1000.0, 988.7, 989.7]
 
-        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
-        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
-
-        printPersons(persons);
+juice.printAnalysis();
     }
 }
