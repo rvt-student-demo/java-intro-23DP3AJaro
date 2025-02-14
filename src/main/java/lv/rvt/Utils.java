@@ -13,7 +13,7 @@ import java.nio.file.StandardOpenOption;
 public class Utils {
     private static Path getFilePath(String filename) {
         try {
-            URL resourceUrl = App.class.getClassLoader().getResource(filename);
+            URL resourceUrl = Main.class.getClassLoader().getResource(filename);
             if (resourceUrl == null) {
                 throw new FileNotFoundException("File not found: " + filename);
             }
