@@ -16,6 +16,28 @@ public class Person {
         this.address = address;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public int getWeight() {
+        return this.weight;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public String getAddress() {
+        return this.address;
+    }
+
+
+
     @Override
     public String toString() {
         return this.name  + " " + this.age + " " + this.weight + " " + this.height + " " + this.address;

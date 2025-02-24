@@ -5,13 +5,11 @@ import java.util.ArrayList;
 
 public class Main 
 {
-    public static void main(String[] args) throws Exception {  
+    public static void main(String[] args) throws Exception {
 
-        ArrayList<Person> personList = PersonManager.getPersonList();
-        for(Person person : personList) {
-            System.out.println(person);
-        }
+        Person newPerson = new Person("Bennet", 27, 69, 185, "Los Angeles");
 
+        PersonManager.addPerson(newPerson);
     }   
     
 }

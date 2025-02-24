@@ -35,4 +35,12 @@ public class PersonManager {
         }
         return personList;
     }
+
+    public static void addPerson(Person person) throws Exception{
+        BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
+
+        writer.newLine();
+        writer.write(person.getName() + ", " + person.getAge() + ", " + person.getWeight() + ", " + person.getHeight() + ", " + person.getAddress());
+        writer.close();
+    }
 }
